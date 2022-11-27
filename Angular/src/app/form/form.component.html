@@ -1,0 +1,59 @@
+<body>
+   
+        <div class="navbar">
+            Angular Assignment
+        </div>
+   
+    
+    <div class=row>
+   
+    <div class="form-group">
+    <div class="form-control"><label>Name: <span>*</span></label>
+    <br>
+    <input required type="text" placeholder="Name" [(ngModel)]="Name" class="form-control" >
+    
+    <label>Age: <span>*</span></label>
+    <br>
+    <input type="number"  placeholder="eg.21" [(ngModel)]="Age" class="form-control">
+    
+    <label >Email: <span>*</span> <span style="font-size:12px; padding: 0; color: crimson;" >{{EmailWarn}}</span></label>
+    
+  
+    <input   type="email" placeholder="abc123@gmail.com" [(ngModel)]="Email" [(ngModel)]="CheckEmail" class="form-control">
+    
+    
+    <label>Mobile No: <span>*</span></label>
+    <br>
+    <input type="number" placeholder="1234567890" [(ngModel)]="Num" class="form-control">
+    
+    <label>Native Place: <span>*</span></label>
+    <br>
+    <input type="text" placeholder="eg.Mumbai" [(ngModel)]="Place" class="form-control"  >
+    
+    <p style="font: size 13px; color:crimson">{{Warn}}</p>
+    <button class="btn btn-success" (click)="Onclick($event)" [disabled]="butt">Submit</button>
+</div>
+{{Name}}
+</div>
+</div>
+<div class="mytable">
+<table class="table">
+    <th class="col">Name</th>
+    <th class="col">Age</th>
+    <th class="col">Email</th>
+    <th class="col">Num</th>
+    <th class="col">Place</th>
+    <tbody *ngFor="let li of list">
+        <td>{{li.Name}}</td>
+        <td>{{li.Age}}</td>
+        <td>{{li.Email}}</td>
+        <td>{{li.Num}}</td>
+        <td>{{li.Place}}</td>
+
+        
+    </tbody>
+</table>
+
+</div>
+
+</body>
